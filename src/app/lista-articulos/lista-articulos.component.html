@@ -1,0 +1,53 @@
+<div class="container">
+  <h5>MUestro lo que tengo en textoFiltro {{ textoFiltro }}</h5>
+  <div class="form-group">
+    <label for="txtFiltro">Descripcion</label>
+    <input
+      type="text"
+      [(ngModel)]="textoFiltro"
+      (keyup)="filtrar()"
+      name="txtFiltro"
+      id="txtFiltro"
+      class="form-control"
+    />
+  </div>
+  <h2>{{ titulo | titlecase }}</h2>
+  <div class="table-responsive" *ngIf="Lista && Lista.length">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            <button class="btn btn-info" (click)="ocultarMostrarImagen()">
+              {{ mostrarImagen ? "Ocultar" : "Mostrar " }} Imagen
+            </button>
+          </th>
+          <th>Descripcion</th>
+          <th>Codigo</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th>Puntaje</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let articulo of Lista">
+          <td align="center">
+            <img
+              *ngIf="mostrarImagen"
+              [src]="articulo.imagen"
+              [title]="articulo.descripcion"
+              [style.height.px]="alturaImagen"
+              [style.margin.px]="margenImagen"
+            />
+          </td>
+          <td>{{ articulo.descripcion }}</td>
+          <td>{{ articulo.codigo }}</td>
+          <td>{{ articulo.cantidad }}</td>
+          <td>
+            {{ articulo.precio | currency: "AR$ ":"symbol-narrow":"1.2-2" }}
+          </td>
+          <td>{{ articulo.puntaje }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
