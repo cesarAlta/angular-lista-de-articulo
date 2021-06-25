@@ -8,7 +8,7 @@ export const Articulos: Articulo[] = [
     cantidad: 139,
     precio: 1221.4,
     puntaje: 4,
-    imagen: 'assets/img/Articulo2.jpg'
+    imagen: '../img/Articulo2.jpg'
   },
   {
     id: 5,
@@ -17,7 +17,7 @@ export const Articulos: Articulo[] = [
     cantidad: 336,
     precio: 400.99,
     puntaje: 3,
-    imagen: 'assets/img/Articulo5.jpg'
+    imagen: '../img/Articulo5.jpg'
   },
   {
     id: 8,
@@ -26,7 +26,7 @@ export const Articulos: Articulo[] = [
     cantidad: 666,
     precio: 1400.99,
     puntaje: 3,
-    imagen: 'assets/img/Articulo2.jpg'
+    imagen: '../img/Articulo2.jpg'
   },
   {
     id: 6,
@@ -35,6 +35,6 @@ export const Articulos: Articulo[] = [
     cantidad: 64,
     precio: 100.99,
     puntaje: 3,
-    imagen: 'assets/img/Articulo5.jpg'
+    imagen: '../img/Articulo5.jpg'
   }
 ];
